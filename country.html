@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аргентина — La Pampa Ресторан</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .map-container {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .map-marker {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s;
+            z-index: 10;
+        }
+        .map-marker:hover {
+            transform: scale(1.4);
+        }
+        .map-marker img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .marker-norte { top: 15%; left: 46%; }
+        .marker-mesopotamia { top: 22%; left: 60%; }
+        .marker-central { top: 28%; left: 40%; }
+        .marker-buenosaires { top: 33%; left: 48%; }
+        .marker-cuyo { top: 38%; left: 28%; }
+        .marker-argentina { top: 48%; left: 46%; }
+        .marker-patagonia { top: 63%; left: 33%; }
+        .marker-tierra { top: 87%; left: 28%; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo"><img src="img/логотип.jpg" alt="La Pampa"></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="catalog.html">Меню</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="country.html" class="active">Аргентина</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+                <button class="theme-toggle">Темная</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Аргентина</h1>
+                <p>Страна солнца, гаучи и восхитительной выпечки!</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Климатические зоны Аргентины</h2>
+                <p style="text-align: center; margin-bottom: 30px;">Кликните на цветную точку, чтобы узнать о климате!</p>
+
+                <div class="map-container">
+                    <img src="img/карта.png" alt="Карта Аргентины" style="width: 100%; height: auto;">
+                    
+                    <!-- Markers -->
+                    <div class="map-marker marker-norte" 
+                         data-name="Северная Аргентина" 
+                         data-climate="Тропический" 
+                         data-temp="25-35°C"
+                         data-desc="Жарко и влажно, много солнечных дней, растут тропические фрукты!">
+                        <img src="img/солнце.png" alt="Солнце">
+                    </div>
+                    <div class="map-marker marker-mesopotamia" 
+                         data-name="Месопотамия" 
+                         data-climate="Пассатный" 
+                         data-temp="20-28°C"
+                         data-desc="Влажно, много рек, красивые луга и пастбища!">
+                        <img src="img/альпака.png" alt="Альпака">
+                    </div>
+                    <div class="map-marker marker-central" 
+                         data-name="Центральная Аргентина" 
+                         data-climate="Умеренный" 
+                         data-temp="15-25°C"
+                         data-desc="Самая комфортная зона, идеальна для сельского хозяйства!">
+                        <img src="img/мяч.png" alt="Мяч">
+                    </div>
+                    <div class="map-marker marker-buenosaires" 
+                         data-name="Буэнос-Айрес" 
+                         data-climate="Субтропический" 
+                         data-temp="17-24°C"
+                         data-desc="Мягкий климат, теплая зима и не жаркое лето!">
+                        <img src="img/танго.png" alt="Танго">
+                    </div>
+                    <div class="map-marker marker-cuyo" 
+                         data-name="Куйо" 
+                         data-climate="Степий" 
+                         data-temp="12-22°C"
+                         data-desc="Сухой воздух, много солнца, растет лучший виноград!">
+                        <img src="img/вино.png" alt="Вино">
+                    </div>
+                    <div class="map-marker marker-argentina" 
+                         data-name="Пампа" 
+                         data-climate="Умеренно-континентальный" 
+                         data-temp="10-20°C"
+                         data-desc="Золотые степи, родины гаучо и аргентинских коров!">
+                        <img src="img/стейк.png" alt="Стейк">
+                    </div>
+                    <div class="map-marker marker-patagonia" 
+                         data-name="Патагония" 
+                         data-climate="Полупустынный" 
+                         data-temp="0-15°C"
+                         data-desc="Прохладно, сильные ветра, необыкновенные пейзажи!">
+                        <img src="img/водопад.png" alt="Водопад">
+                    </div>
+                    <div class="map-marker marker-tierra" 
+                         data-name="Огненная Земля" 
+                         data-climate="Субантарктический" 
+                         data-temp="-5-10°C"
+                         data-desc="Холодно, но очень красиво! Крайняя южная точка Америки!">
+                        <img src="img/кактус.png" alt="Кактус">
+                    </div>
+
+                    <!-- Tooltip -->
+                    <div id="climateTooltip" 
+                         style="position: absolute; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.25); pointer-events: none; display: none; z-index: 100; color: #333; min-width: 220px;">
+                        <h3 id="regionName" style="margin: 0 0 15px; color: #ff7f50; font-size: 22px;"></h3>
+                        <p style="margin: 8px 0; font-size: 16px;"><strong>Климат:</strong> <span id="regionClimate" style="color: #4a4a4a;"></span></p>
+                        <p style="margin: 8px 0; font-size: 16px;"><strong>Температура:</strong> <span id="regionTemp" style="color: #4a4a4a;"></span></p>
+                        <p id="regionDesc" style="margin-top:12px; font-size:15px; line-height:1.5;"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>La Pampa</h3>
+                    <p>Ресторан Аргентинской кухни</p>
+                </div>
+                <div>
+                    <h3>Контакты</h3>
+                    <p>+54 (11) 1234-5678</p>
+                    <p>@la-pampa-restaurant.com</p>
+                </div>
+                <div>
+                    <h3>Адрес</h3>
+                    <p>г. Буэнос-Айрес, ул. Córdoba 456</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 La Pampa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const markers = document.querySelectorAll('.map-marker');
+        const tooltip = document.getElementById('climateTooltip');
+
+        markers.forEach(marker => {
+            marker.addEventListener('mouseenter', (e) => {
+                document.getElementById('regionName').textContent = marker.dataset.name;
+                document.getElementById('regionClimate').textContent = marker.dataset.climate;
+                document.getElementById('regionTemp').textContent = marker.dataset.temp;
+                document.getElementById('regionDesc').textContent = marker.dataset.desc;
+
+                tooltip.style.display = 'block';
+                const rect = marker.getBoundingClientRect();
+                tooltip.style.left = (e.offsetX + 40) + 'px';
+                tooltip.style.top = (e.offsetY - 20) + 'px';
+            });
+
+            marker.addEventListener('mousemove', (e) => {
+                const rect = document.querySelector('.map-container').getBoundingClientRect();
+                tooltip.style.left = (e.clientX - rect.left + 25) + 'px';
+                tooltip.style.top = (e.clientY - rect.top - 10) + 'px';
+            });
+
+            marker.addEventListener('mouseleave', () => {
+                tooltip.style.display = 'none';
+            });
+
+            marker.addEventListener('click', (e) => {
+                alert(`${marker.dataset.name} — ${marker.dataset.climate}!\n${marker.dataset.desc}`);
+            });
+        });
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

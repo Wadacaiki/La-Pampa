@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Pampa — Ресторан Аргентинской кухни</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo"><img src="img/логотип.jpg" alt="La Pampa"></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="catalog.html">Меню</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="country.html">Аргентина</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+                <button class="theme-toggle">Темная</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>La Pampa — Аромат Аргентины</h1>
+                <p>Ощутите аутентичный вкус Аргентины: от сочного асадо до нежных медиальюнас с дульсе-де-лече!</p>
+                <a href="catalog.html" class="btn">Открыть меню</a>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Наши преимущества</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Настоящая Аргентина</h3>
+                        <p>Рецепты, передающиеся из поколения в поколение</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Только свежие продукты</h3>
+                        <p>Премиальное мясо, сыры и ингредиенты из Аргентины</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Уютная атмосфера</h3>
+                        <p>Почувствуйте себя на настоящей эстанции в Пампе</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Быстрая подача</h3>
+                        <p>Готовим с любовью, но быстро!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Хиты нашего меню</h2>
+                <div class="products">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('img/Асадо.jpg');"></div>
+                        <div class="product-info">
+                            <h3>Асадо (Asado)</h3>
+                            <p>Главное национальное блюдо Аргентины! Сочные куски говядины, ребрышки, стейки и колбаски чоризо, медленно приготовленные на открытом огне или углях. Подается с фирменным соусом чимичурри, который добавляет неповторимый вкус и аромат!</p>
+                            <div class="product-price">5500 ARS</div>
+                            <button class="btn btn-primary" onclick="orderProduct('Асадо (Asado)')">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('img/Эмпанадас.jpg');"></div>
+                        <div class="product-info">
+                            <h3>Эмпанадас (Empanadas)</h3>
+                            <p>Небольшие жареные или печеные пирожки из нежного теста с разнообразными начинками! Самые популярные — с рубленой говядиной, ветчиной с сыром или курицей! Вкус, который запомнится надолго!</p>
+                            <div class="product-price">1200 ARS</div>
+                            <button class="btn btn-primary" onclick="orderProduct('Эмпанадас (Empanadas)')">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('img/Медиалунас.jpg');"></div>
+                        <div class="product-info">
+                            <h3>Медиалунас (Medialunas)</h3>
+                            <p>Аргентинские мини-круассаны! Обычно они более сладкие, плотные и часто подаются со сливочным сыром или dulce de leche! Идеальное дополнение к утреннему кофе!</p>
+                            <div class="product-price">900 ARS</div>
+                            <button class="btn btn-primary" onclick="orderProduct('Медиалунас (Medialunas)')">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('img/Миланеса.jpg');"></div>
+                        <div class="product-info">
+                            <h3>Миланеса (Milanesa)</h3>
+                            <p>Тонкий стейк в хрустящей панировке из сухарных крошек — как шницель, но по-аргентински! Часто запекают с соусом, ветчиной и сыром (вариант наполетан) и подают с горой картофеля фри! Очень сытно и невероятно вкусно!</p>
+                            <div class="product-price">3800 ARS</div>
+                            <button class="btn btn-primary" onclick="orderProduct('Миланеса (Milanesa)')">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('img/Проволета.jpg');"></div>
+                        <div class="product-info">
+                            <h3>Проволета (Provoleta)</h3>
+                            <p>Жареный сыр проволоне, приготовленный на гриле до образования аппетитной, румяной корочки! Посыпают орегано и едят с хлебом! Прекрасная закуска к вину!</p>
+                            <div class="product-price">2200 ARS</div>
+                            <button class="btn btn-primary" onclick="orderProduct('Проволета (Provoleta)')">Заказать</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('img/Альфахор.jpg');"></div>
+                        <div class="product-info">
+                            <h3>Альфахор (Alfajor)</h3>
+                            <p>Популярнейшее аргентинское печенье, состоящее из двух слоев рассыпчатого теста с прослойкой из dulce de leche, часто покрытое шоколадом или глазурью! Сладко, нежно и очень ароматно!</p>
+                            <div class="product-price">1600 ARS</div>
+                            <button class="btn btn-primary" onclick="orderProduct('Альфахор (Alfajor)')">Заказать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Часто задаваемые вопросы</h2>
+                <div class="faq">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>У вас есть вегетарианские блюда?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Да! Мы предлагаем эмпанадас с овощами и сыром, проволету и многое другое!</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Доставляете ли вы по городу?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Да! Мы доставляем по всему городу. Минимальный заказ — 4000 ARS!</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Можно ли заказать столик?</span>
+                            <span>+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Конечно! Свяжитесь с нами для бронирования столика на любое количество человек!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>La Pampa</h3>
+                    <p>Ресторан Аргентинской кухни</p>
+                </div>
+                <div>
+                    <h3>Контакты</h3>
+                    <p>+54 (11) 1234-5678</p>
+                    <p>@la-pampa-restaurant.com</p>
+                </div>
+                <div>
+                    <h3>Адрес</h3>
+                    <p>г. Буэнос-Айрес, ул. Córdoba 456</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 La Pampa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

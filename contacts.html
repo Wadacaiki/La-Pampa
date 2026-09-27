@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — La Pampa Ресторан</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-image: url('img/фоновая.png') !important;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        section .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+        [data-theme="dark"] section .container {
+            background: rgba(61, 35, 23, 0.95);
+        }
+        .hero {
+            background: none !important;
+            color: #000000 !important;
+            text-shadow: none;
+        }
+        .hero h1 {
+            font-size: 50px !important;
+            font-weight: 900 !important;
+            color: #000000 !important;
+        }
+        .hero p {
+            font-size: 24px !important;
+            font-weight: 600 !important;
+            color: #000000 !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo"><img src="img/логотип.jpg" alt="La Pampa"></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="catalog.html">Меню</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="contacts.html" class="active">Контакты</a></li>
+                        <li><a href="country.html">Аргентина</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+                <button class="theme-toggle">Темная</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Контакты</h1>
+                <p>Свяжитесь с нами любым удобным способом!</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Наши контакты</h2>
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <p style="font-size: 20px;">+54 (11) 1234-5678</p>
+                    <p style="font-size: 20px;">info@la-pampa-restaurant.ru</p>
+                    <p style="font-size: 20px;">г. Буэнос-Айрес, ул. Córdoba 456</p>
+                    <p style="font-size: 20px;">Пн-Вс: 11:00-23:00</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Оставить отзыв</h2>
+                <div class="form-container">
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <label>Ваше имя *</label>
+                            <input type="text" id="reviewName" required placeholder="Введите имя">
+                            <span class="error">Это поле обязательно</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Ваш отзыв *</label>
+                            <textarea id="reviewText" rows="4" required placeholder="Напишите ваш отзыв"></textarea>
+                            <span class="error">Это поле обязательно</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Отправить отзыв</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Обратная связь</h2>
+                <div class="form-container">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Ваше имя *</label>
+                            <input type="text" required placeholder="Введите имя">
+                            <span class="error">Это поле обязательно</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" required placeholder="email@example.com">
+                            <span class="error">Это поле обязательно</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Тема</label>
+                            <select>
+                                <option>Общий вопрос</option>
+                                <option>Забронировать столик</option>
+                                <option>Сотрудничество</option>
+                                <option>Жалоба</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Сообщение *</label>
+                            <textarea rows="4" required placeholder="Ваше сообщение"></textarea>
+                            <span class="error">Это поле обязательно</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Отзывы</h2>
+                <div id="reviewsList" class="reviews"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>La Pampa</h3>
+                    <p>Ресторан Аргентинской кухни</p>
+                </div>
+                <div>
+                    <h3>Контакты</h3>
+                    <p>+54 (11) 1234-5678</p>
+                    <p>@la-pampa-restaurant.com</p>
+                </div>
+                <div>
+                    <h3>Адрес</h3>
+                    <p>г. Буэнос-Айрес, ул. Córdoba 456</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 La Pampa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

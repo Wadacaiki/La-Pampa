@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас — La Pampa Ресторан</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .history-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .history-item {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .history-year {
+            font-size: 50px;
+            font-weight: bold;
+            color: var(--primary-color);
+            min-width: 100px;
+        }
+        .history-content {
+            flex-grow: 1;
+        }
+        @media (max-width: 600px) {
+            .history-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo"><img src="img/логотип.jpg" alt="La Pampa"></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html" class="active">О нас</a></li>
+                        <li><a href="catalog.html">Меню</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="country.html">Аргентина</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+                <button class="theme-toggle">Темная</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Наш ресторан</h1>
+                <p>Домашняя атмосфера и настоящие аргентинские блюда!</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Наша история</h2>
+                <div class="history-container">
+                    <div class="history-item">
+                        <div class="history-year">2005</div>
+                        <div class="history-content">
+                            <h3 style="margin-top: 0;">Открытие!</h3>
+                            <p>Первый маленький ресторанчик в центре Буэнос-Айреса, где мы готовили блюда по рецептам бабушки!</p>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-year">2012</div>
+                        <div class="history-content">
+                            <h3 style="margin-top: 0;">Расширение!</h3>
+                            <p>Стало тесно! Мы открыли большую кухню и начали работать с местными фермами, чтобы продукты были еще свежее!</p>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-year">2020</div>
+                        <div class="history-content">
+                            <h3 style="margin-top: 0;">Реставрация!</h3>
+                            <p>Обновили интерьер, сделали его еще более притягательным! Добавили еще больше новых блюд и живую музыку!</p>
+                        </div>
+                    </div>
+                    <div class="history-item">
+                        <div class="history-year">2026</div>
+                        <div class="history-content">
+                            <h3 style="margin-top: 0;">Сегодня!</h3>
+                            <p>Современный, но такой же родной ресторан La Pampa — место, где каждый гость почувствует себя гостем в Аргентине!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Наша миссия</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 18px;">
+                    Поделиться настоящей аргентинской культурой и вкусом, используя только лучшие ингредиенты!
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Наша команда</h2>
+                <div class="team">
+                    <div class="team-member">
+                        <div class="team-avatar" style="background-image: url('img/Януш Ковальский.jpg');"></div>
+                        <h3>Diego López</h3>
+                        <p>Главный повар — потомственный гаучо!</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-avatar" style="background-image: url('img/Анна Войцеховска.jpg');"></div>
+                        <h3>Sofía Martínez</h3>
+                        <p>Директор ресторана</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-avatar" style="background-image: url('img/Петр Дабровский.jpg');"></div>
+                        <h3>Lucas Fernández</h3>
+                        <p>Сомелье и эксперт по аргентинским винам</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-avatar" style="background-image: url('img/Мария Шиманская.jpg');"></div>
+                        <h3>Valentina Rossi</h3>
+                        <p>Повар по десертам</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>La Pampa</h3>
+                    <p>Ресторан Аргентинской кухни</p>
+                </div>
+                <div>
+                    <h3>Контакты</h3>
+                    <p>+54 (11) 1234-5678</p>
+                    <p>@la-pampa-restaurant.com</p>
+                </div>
+                <div>
+                    <h3>Адрес</h3>
+                    <p>г. Буэнос-Айрес, ул. Córdoba 456</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 La Pampa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
